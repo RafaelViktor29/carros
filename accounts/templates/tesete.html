@@ -1,0 +1,25 @@
+<form method="POST">
+    {% csrf_token %}
+
+    <table>
+        <tr>
+            <td><b>Usuário: </b></td>
+            <td>{{ user_form.username }}</td>
+            <td>{{ user_form.username.errors }}</td>
+        </tr>
+
+        <tr>
+            <td><b>Senha: </b></td>
+            <td>{{ user_form.password1 }}</td>
+            <td>{{ user_form.password1.errors }}</td>
+        </tr>
+
+        <tr>
+            <td><b>Confirmação de senha: </b></td>
+            <td>{{ user_form.password2 }}</td>
+            <td>{{ user_form.password2.errors }}</td>
+        </tr>
+    </table>
+
+    <input type="submit" value="Cadastrar">
+</form>
